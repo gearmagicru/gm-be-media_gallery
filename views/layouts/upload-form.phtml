@@ -1,0 +1,50 @@
+<?php
+/**
+ * Макет страницы.
+ * 
+ * Этот файл является частью модуля "Фотогалерея".
+ * 
+ * @copyright Copyright (c) 2015 Веб-студия GearMagic
+ * @license https://gearmagic.ru/license/
+ * 
+ * @var \Gm\View\View $this
+ */
+
+$galleryId = (int) Gm::$app->router->get('id'); // идент. альбома
+$pluginId  = Gm::$app->request->getQuery('pid'); // идент. плагина
+$uploader  = $this->widget('gm.wd.fine_uploader', [
+    'template'  => 'trigger',
+    'uploadUrl' => '../perform' . ($galleryId ? '/' . $galleryId : '') . '?pid=' . $pluginId,
+    'request'   => [
+        'customHeaders' => [
+            Gm::$app->request->csrfHeaderName => Gm::$app->request->getCsrfToken()
+        ]
+    ],
+    'callbacks' => [
+        'onComplete' => 'function (id, name, json) {'
+            . 'let w = parent.window, r = w.Gm.response.normalize(json);'
+            . 'if (!r.success) w.Ext.Msg.exception(r, false, true);'
+            . '}'
+    ]
+]);
+
+$this->registerMCssFile('/css/fine-uploader.css');
+$this->registerVCssFile('/gm/fonts/robotocondensed.css');
+?>
+<!DOCTYPE HTML>
+<html lang="<?= $this->getLang() ?>">
+<head>
+<meta charset="<?= $this->getCharset() ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <?php $this->head() ?>
+</head>
+
+<body>
+    <?php $this->beginBody() ?>
+    <?= $uploader ?>
+    <?php $this->endBody() ?>
+</body>
+
+</html>
