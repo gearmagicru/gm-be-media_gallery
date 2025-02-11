@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/gearmagicru/gm-be-media_gallery/refs/heads/master/assets/images/icon.svg" width="64px" height="64px" align="absmiddle"> Модуль панели управления "Панель инструментов отладчика"
+# <img src="https://raw.githubusercontent.com/gearmagicru/gm-be-media_gallery/refs/heads/master/assets/images/icon.svg" width="64px" height="64px" align="absmiddle"> Модуль панели управления "Медиагалерея"
 
 Модуль организует управление медиагалерей сайта.
 
