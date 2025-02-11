@@ -1,0 +1,84 @@
+/*!
+ * Виджет "Fine Uploader".
+ */
+
+html, body {
+    height: 98%;
+    margin: 0;
+    padding: 1px;
+    border: 0 none;
+    position: static;
+}
+body { font: normal 14px/16px "Roboto Condensed", helvetica, arial, verdana, sans-serif; }
+
+.qq-container, .qq-container > div { height: 100%; }
+.qq-uploader {
+    padding: 3px;
+    height: 100%;
+    max-height: none;
+}
+.qq-uploader::before { color: #999999; }
+.qq-uploader dialog::backdrop { background: rgba(245, 245, 245,0.9); }
+.qq-uploader dialog { border: none; box-shadow: #888 0px 0px 6px; }
+.qq-uploader dialog .qq-dialog-message-selector {
+    color: #444;
+    font: normal 14px/16px "Roboto Condensed", helvetica, arial, verdana, sans-serif;
+}
+.qq-uploader .buttons {
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+.qq-upload-button-selector { cursor: pointer; }
+.qq-button,
+.qq-upload-retry,
+.qq-upload-cancel,
+.qq-upload-button {
+    font: normal 13px/16px "Roboto Condensed", helvetica, arial, verdana, sans-serif;
+    border-radius: 2px;
+    padding: 4px 10px 4px 10px;
+    border-width: 0;
+    border-style: none;
+    background-color: #217346;
+    box-shadow: none;
+    margin: 3px;
+    color: #fff;
+}
+.qq-upload-retry:hover,
+.qq-upload-button:hover,
+.qq-upload-button-hover {
+    cursor: pointer;
+    border-color: #1a5b37;
+    background-color: #428862;
+}
+.qq-upload-cancel { background-color: #ca4f4f; }
+.qq-upload-cancel:hover { background-color: #d26969; }
+.qq-upload-list {
+    margin-top: 38px;
+    max-height: none;
+    height: calc(100% - 40px);
+    box-shadow: none;
+}
+.qq-upload-list li { font-size: 14px; }
+.qq-upload-list li.qq-upload-success { background-color: #c5dace; }
+.qq-upload-size { 
+    font-size: 14px; 
+    min-width: 65px;
+    display: inline-block;
+}
+.qq-upload-status-text { display: inline-block; font-weight: normal; }
+.qq-upload-file { width: 125px; }
+.qq-progress-bar { background: #428862; }
+.qq-upload-drop-area-active { border: none; background: #d4e5de; }
+
+.qq-total-progress-bar-container {
+    position: absolute;
+    margin: 0;
+    float: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+}
+.qq-total-progress-bar { height: 4px; border-radius: none; }
+.qq-progress-bar { height: 4px; margin-bottom: 7px; }

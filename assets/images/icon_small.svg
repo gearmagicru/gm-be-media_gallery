@@ -1,0 +1,13 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+  <g id="icon">
+    <path d="M14.017,0H1.983C1.442,0,1,0.442,1,0.983v14.033c0,0.541,0.442,0.983,0.983,0.983h12.033c0.541,0,0.983,-0.442,0.983,-0.983V0.983C15,0.442,14.558,0,14.017,0zM13,14H3v-1H2v-2h1V9H2V7h1V5H2V3h1V2h10V14z" fill="#eab765"/>
+    <path d="M1,7v2H0l0,-2H1zM0,3l0,2h1V3H0zM0,11l0,2h1v-2H0z" fill="#e6e7e8"/>
+    <path d="M2,7v2H1V7H2zM1,3v2h1V3H1zM1,11v2h1v-2H1z" fill="#F1F2F2"/>
+    <path d="M3,7v2H2V7H3zM2,3v2h1V3H2zM2,11v2h1v-2H2z" fill="#B4B4B5"/>
+    <rect x="3" y="2" width="10" height="12" fill="#FFFFFF"/>
+    <rect x="4" y="3" width="8" height="4.783" fill="#E6E9ED"/>
+    <rect x="4" y="8" width="8" height="5" fill="#E6E9ED"/>
+    <path d="M8.965,10.717c0.528,0.36,1.111,0.7,1.804,0.89v0.219C7.786,11.076,6.816,7.74,4,10.712V13h7.994v-0.424H12v-0.813v-0.495V11.2C10.976,10.471,10.187,9.796,8.965,10.717z" fill="#4EA17E"/>
+    <path d="M4,6.789l2.385,-2.256c0.077,-0.079,0.234,-0.079,0.311,0l0.899,0.921L6.511,6.519l0.138,0.148l2.773,-2.739c0.077,-0.078,0.231,-0.078,0.308,0l2.233,2.276c0.025,0.025,0.038,0.056,0.038,0.087V8H4V6.789z" fill="#eab765"/>
+  </g>
+</svg>

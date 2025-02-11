@@ -1,0 +1,52 @@
+/*!
+ * Фотогалерея (Grid).
+ *
+ * Модуль "Медиагалерея".
+ *
+ * Copyright 2015 Вeб-студия GearMagic
+ * Copyright Anton Tivonenko <anton.tivonenko@gmail.com>
+ * Licensed https://gearmagic.ru/license/
+ */
+
+/* Заливка заднего фона сетки (см. идент. viewManager) */
+#gm-media-gallery-grid .x-grid-view {
+    background: url("../images/watermark.svg") no-repeat calc(100% - 25px) calc(100% - 20px);
+    background-size: 100px;
+}
+
+
+/**
+ * Панель инструментов сетки альбомов.
+ */
+/* Значок "Добавить" */
+.gm-media-gallery__icon-add_large,
+.gm-media-gallery__icon-add_medium,
+.gm-media-gallery__icon-add { background-image: url("../images/icon-add.svg"); }
+.gm-media-gallery__icon-add_small { background-image: url("../images/icon-add_small.svg"); }
+/* Значок "Удалить" */
+.gm-media-gallery__icon-delete_large,
+.gm-media-gallery__icon-delete_medium,
+.gm-media-gallery__icon-delete { background-image: url("../images/icon-delete.svg"); }
+.gm-media-gallery__icon-delete_small { background-image: url("../images/icon-delete_small.svg"); }
+/* Значок "Изображения фотоальбома" */
+.gm-media-gallery__icon-items { background-image: url("../images/icon-items.svg"); }
+
+
+/**
+ * Панель инструментов сетки элементов.
+ */
+ /* Значок "Добавить" */
+.gm-media-gallery__icon-item-add_large,
+.gm-media-gallery__icon-item-add_medium,
+.gm-media-gallery__icon-item-add { background-image: url("../images/icon-item-add.svg"); }
+.gm-media-gallery__icon-item-add_small { background-image: url("../images/icon-item-add_small.svg"); }
+ /* Значок "Добавить" */
+ .gm-media-gallery__icon-items-add_large,
+ .gm-media-gallery__icon-items-add_medium,
+ .gm-media-gallery__icon-items-add { background-image: url("../images/icon-items-add.svg"); }
+ .gm-media-gallery__icon-items-add_small { background-image: url("../images/icon-items-add_small.svg"); }
+/* Значок "Удалить" */
+.gm-media-gallery__icon-item-delete_large,
+.gm-media-gallery__icon-item-delete_medium,
+.gm-media-gallery__icon-item-delete { background-image: url("../images/icon-item-delete.svg"); }
+.gm-media-gallery__icon-item-delete_small { background-image: url("../images/icon-item-delete_small.svg"); }
