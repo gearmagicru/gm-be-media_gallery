@@ -1,13 +1,7 @@
 {
     "name": "gearmagicru/gm-be-media_gallery",
-    "description": "Control panel module \"Media gallery\"",
-    "keywords": [
-        "gm",
-        "gearmagic",
-        "GM Panel",
-        "module",
-        "mediagallery"
-    ],
+    "description": "Control Panel module \"Media gallery\"",
+    "keywords": ["gearmagic", "gm-panel", "gm-component", "gm-module", "module", "mediagallery"],
     "homepage": "https://apps.gearmagic.ru/component/gm-be-media_gallery",
     "type": "component",
     "license": "MIT",
