@@ -13,7 +13,7 @@ return [
     'use'         => BACKEND,
     'id'          => 'gm.be.media_gallery',
     'name'        => 'Media gallery',
-    'description' => 'Managing media gallery albums on the website',
+    'description' => 'Managing site media gallery components',
     'namespace'   => 'Gm\Backend\MediaGallery',
     'path'        => '/gm/gm.be.media_gallery',
     'route'       => 'media-gallery',
@@ -36,7 +36,6 @@ return [
     'events'      => [],
     'required'    => [
         ['php', 'version' => '8.2'],
-        ['app', 'code' => 'GM CMS'],
-        ['extension', 'id' => 'gm.be.references.gallery_types']
+        ['app', 'code' => 'GM CMS']
     ]
 ];
