@@ -11,46 +11,46 @@
 
 return [
     '{name}'        => 'Медигалерея',
-    '{description}' => 'Управления альбомами медиагалереи на сайте',
+    '{description}' => 'Управление компонентами медиагалереи сайта',
     '{permissions}' => [
-        'any'       => ['Полный доступ', 'Просмотр и внесение изменений в альбом'],
-        'view'      => ['Просмотр', 'Просмотр альбома'],
-        'read'      => ['Чтение', 'Чтение альбома'],
-        'add'       => ['Добавление', 'Добавление альбома'],
-        'edit'      => ['Изменение', 'Изменение альбома'],
-        'delete'    => ['Удаление', 'Удаление альбома'],
-        'clear'     => ['Очистка', 'Удаление всех альбома']
+        'any'       => ['Полный доступ', 'Просмотр и внесение изменений в компонента'],
+        'view'      => ['Просмотр', 'Просмотр компонента'],
+        'read'      => ['Чтение', 'Чтение компонента'],
+        'add'       => ['Добавление', 'Добавление компонента'],
+        'edit'      => ['Изменение', 'Изменение компонента'],
+        'delete'    => ['Удаление', 'Удаление компонента'],
+        'clear'     => ['Очистка', 'Удаление всех компонента']
     ],
 
     // Upload: сообщения / заголовки
     'Uploading' => 'Загрузка',
     // Upload: сообщения / текст
-    'Unable to load files' => 'Невозможно загрузить файлы альбома.',
+    'Unable to load files' => 'Невозможно загрузить файлы компонента.',
     'File "{0}" has been uploaded successfully' => 'Файл "{0}" успешно загружен.',
 
     // Grid: панель инструментов
     'Add' => 'Добавить', 
-    'Adding an album' => 'Добавление альбома',
+    'Adding an component' => 'Добавление компонента',
     'Add "{0}"' => 'Добавить "{0}"',
-    'Deleting selected albums' => 'Удаление выделенных альбомов',
-    'Delete all albums' => 'Удаление всех альбомов',
+    'Deleting selected components' => 'Удаление выделенных компонентов',
+    'Delete all components' => 'Удаление всех компонентов',
     // Grid: контекстное меню записи
     'Edit menu' => 'Редактировать',
-    'Album items' => 'Элементы альбома',
+    'Component items' => 'Элементы компонента',
     // Grid: столбцы
     'Name' => 'Название',
     'Description' => 'Описание',
-    'Album identifier' => 'Идентификатор альбома',
-    'Go to adding / editing album items' => 'Перейти к добавлению / редактированию элементов альбома',
+    'Component identifier' => 'Идентификатор компонента',
+    'Go to adding / editing component items' => 'Перейти к добавлению / редактированию элементов компонента',
     'Type' => 'Вид',
-    'Album type' => 'Вид альбома',
+    'Component type' => 'Вид медиагалереи',
     'Published' => 'Опубликован',
-    'The album has been published' => 'Альбом опубликован',
+    'The component has been published' => 'Компонент опубликован',
     'Author' => 'Автор',
     'yes' => 'да',
     'no' => 'нет',
     // Grid: сообщения / заголовки
-    'Deleting a album' => 'Удаление альбома',
+    'Deleting a component' => 'Удаление компонента',
     'Publication' => 'Опубликование',
     'Hide' => 'Скрыть',
     // Grid: сообщения / текст
@@ -58,16 +58,16 @@ return [
     '{0} "{1}" - published' => '{0} "{1}" - опубликован.',
     'Unable to perform action, one of the plugins is missing' 
         => 'Невозможно выполнить действие, отсутствует один из плагинов медиагалереи.',
-    'Error deleting folder "{0}" (no access), album "{1}"' 
+    'Error deleting folder "{0}" (no access), component "{1}"' 
         => 'Ошибка удаления папки "{0}" (нет доступа), альбом "{1}".',
-    'Folders ({0} of {1}) containing album files were partially deleted, but album records remain' 
-        => 'Папки ({0} из {1}) с файлами альбомов частично удалены, но записи альбомов остались.',
+    'Folders ({0} of {1}) containing component files were partially deleted, but component records remain' 
+        => 'Папки ({0} из {1}) с файлами компонентов частично удалены, но записи компонентов остались.',
 
     // ItemsGrid: сообщения / текст
-    'Unable to show gallery items (parameter error)' => 'Невозможно показать элементы альбома (ошибка параметра)',
-    'Unable to get album item (parameter error)' => 'Невозможно получить элемент альбома (ошибка параметра)',
+    'Unable to show gallery items (parameter error)' => 'Невозможно показать элементы компонента (ошибка параметра)',
+    'Unable to get component item (parameter error)' => 'Невозможно получить элемент компонента (ошибка параметра)',
     'Error deleting file "{0}" (no access)' 
         => 'Ошибка удаления файла "{0}" (нет доступа).',
-    'Album images ({0} of {1}) have been partially removed, but album entries remain' 
-        => 'Изображения ({0} из {1}) альбома частично удалены, но записи альбома остались.',
+    'Component images ({0} of {1}) have been partially removed, but component entries remain' 
+        => 'Изображения ({0} из {1}) компонента частично удалены, но записи компонента остались.'
 ];
