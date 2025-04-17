@@ -11,9 +11,9 @@
 
 return [
     'name'        => 'Media gallery',
-    'description' => 'Managing media gallery albums on the website',
-    'version'     => '1.0',
-    'versionDate' => '20-12-2017',
+    'description' => 'Managing site media gallery components',
+    'version'     => '1.0.1',
+    'versionDate' => '17-04-2025',
     'author'      => 'GearMagic',
     'authorUrl'   => 'https://gearmagic.ru',
     'email'       => 'anton.tivonenko@gmail.com',
