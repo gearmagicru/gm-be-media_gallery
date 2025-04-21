@@ -13,7 +13,7 @@ use Gm\Db\ActiveRecord;
 use Gm\Data\DataManager as DM;
 
 /**
- * Активная запись галереи.
+ * Активная запись компонента медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Model
@@ -76,7 +76,7 @@ class Gallery extends ActiveRecord
     }
 
     /**
-     * optionsToArray
+     * Декодирует настройки медиагалереи в массив.
      * 
      * @return array<string, mixed>
      */
