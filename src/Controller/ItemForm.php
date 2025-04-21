@@ -16,7 +16,7 @@ use Gm\Panel\Widget\EditWindow;
 use Gm\Panel\Controller\FormController;
 
 /**
- * Контроллер формы элемента альбома.
+ * Контроллер формы элемента компонента медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Controller
@@ -30,7 +30,7 @@ class ItemForm extends FormController
     protected string $defaultModel = 'ItemForm';
 
     /**
-     * Идентификатор альбома.
+     * Идентификатор компонента медиагалереи.
      * 
      * @see ItemForm::init()
      * 
@@ -65,7 +65,7 @@ class ItemForm extends FormController
                             $result = $this->errorResponse(
                                 GM_MODE_DEV ?
                                     Gm::t('app', 'Parameter passed incorrectly "{0}"', ['gid']) :
-                                    $this->module->t('Unable to get album item (parameter error)')
+                                    $this->module->t('Unable to get component item (parameter error)')
                             );
                             return;
                         }
@@ -81,7 +81,7 @@ class ItemForm extends FormController
                                 $result = $this->errorResponse(
                                     GM_MODE_DEV ?
                                         Gm::t('app', 'Parameter passed incorrectly "{0}"', ['pid']) :
-                                        $this->module->t('Unable to get album item (parameter error)')
+                                        $this->module->t('Unable to get component item (parameter error)')
                                 );
                                 return;
                             }
@@ -90,7 +90,7 @@ class ItemForm extends FormController
                             $result = $this->errorResponse(
                                 GM_MODE_DEV ?
                                     Gm::t('app', 'Parameter "{0}" not specified', ['pid']) : 
-                                    $this->module->t('Unable to get album item (parameter error)')
+                                    $this->module->t('Unable to get component item (parameter error)')
                             );
                             return;
                         }
