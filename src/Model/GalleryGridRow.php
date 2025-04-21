@@ -13,7 +13,7 @@ use Gm;
 use Gm\Panel\Data\Model\FormModel;
 
 /**
- * Модель данных профиля записи альбома.
+ * Модель данных профиля записи компонента медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Model
@@ -46,8 +46,8 @@ class GalleryGridRow extends FormModel
 
         $this
             ->on(self::EVENT_AFTER_SAVE, function ($isInsert, $columns, $result, $message) {
-                // вид альбома
-                $pluginName = Gm::$app->request->post('pname', $this->module->t('Album'));
+                // вид медиагалереи
+                $pluginName = Gm::$app->request->post('pname', $this->module->t('Component'));
                 // Если значение `published` отличается от устанавливаемого значения, то `$result = 1`. 
                 // В остальных случаях  `$result = 0`, т.к. значение уже установлено и это считается
                 // ошибкой. Чтобы не было такой ошибки, переопределяем `$message`.
@@ -65,7 +65,7 @@ class GalleryGridRow extends FormModel
     }
 
     /**
-     * Показывает альбом.
+     * Показывает компонент.
      * 
      * @return $this
      */
@@ -76,7 +76,7 @@ class GalleryGridRow extends FormModel
     }
 
     /**
-     * Скрывает альбом.
+     * Скрывает компонент.
      * 
      * @return $this
      */
