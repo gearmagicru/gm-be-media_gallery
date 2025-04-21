@@ -16,7 +16,7 @@ use Gm\Panel\Data\Model\GridModel;
 use Gm\Filesystem\Filesystem as Fs;
 
 /**
- * Модель данных списка элементов альбома.
+ * Модель данных списка элементов компонента медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Model
@@ -135,22 +135,23 @@ class ItemsGrid extends GridModel
     }
 
     /**
-     * Удаляет файлы из папки альбома.
+     * Удаляет файлы из папки компонента медиагалереи.
      * 
-     * @param array<int, int> $rowsId Идентификаторы альбомов.
-     * @param bool $someRecords Значение `true`, если удаление нескольких альбомов.
+     * @param array<int, int> $rowsId Идентификаторы компонентов медиагалереи.
+     * @param bool $someRecords Значение `true`, если удаление нескольких компонентов 
+     *     медиагалереи.
      * 
      * @return bool
      */
     protected function deleteFiles(array $rowsId, bool $someRecords): bool
     {
-        // если удаление выбранных альбомов, а идент. нет
+        // если удаление выбранных компонентов, а идент. нет
         if ($someRecords && empty($rowsId)) return true;
 
         /** @var string $publishedPath */
         $publishedPath = Gm::alias('@published');
 
-        /** @var array $rows Все элементы альбомов */
+        /** @var array $rows Все элементы компонентов */
         $rows = (new Item())->fetchAll(null, ['*'], $someRecords ? ['id' => $rowsId] : ['gallery_id' => $this->getGalleryId()]);
         $index = 1;
         foreach ($rows as $row) {
@@ -165,7 +166,7 @@ class ItemsGrid extends GridModel
                             ) 
                             . '<br>' .
                             $this->module->t(
-                                'Album images ({0} of {1}) have been partially removed, but album entries remain', [$index, sizeof($rows)]
+                                'Component images ({0} of {1}) have been partially removed, but component entries remain', [$index, sizeof($rows)]
                             )
                         );
                         return false;
@@ -183,7 +184,7 @@ class ItemsGrid extends GridModel
                             ) 
                             . '<br>' .
                             $this->module->t(
-                                'Album images ({0} of {1}) have been partially removed, but album entries remain', [$index, sizeof($rows)]
+                                'Component images ({0} of {1}) have been partially removed, but component entries remain', [$index, sizeof($rows)]
                             )
                         );
                         return false;
@@ -227,7 +228,7 @@ class ItemsGrid extends GridModel
     /**
      * {@inheritdoc}
      * 
-     * Для правильного подсчета элементов в альбоме. {@see \Gm\Panel\Data\Model::deleteMessage()}
+     * Для правильного подсчета элементов в компоненте. {@see \Gm\Panel\Data\Model::deleteMessage()}
      */
     public function selectCount(string $tableName = null): int
     {
@@ -244,7 +245,7 @@ class ItemsGrid extends GridModel
     }
 
     /**
-     * Возвращает идентификатор альбома.
+     * Возвращает идентификатор компонента медиагалереи.
      * 
      * @return int
      */
