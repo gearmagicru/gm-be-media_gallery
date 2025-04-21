@@ -14,7 +14,7 @@ use Gm\Panel\Data\Model\GridModel;
 use Gm\Filesystem\Filesystem as Fs;
 
 /**
- * Модель данных списка альбомов.
+ * Модель данных списка компонентов медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Model
@@ -23,13 +23,13 @@ use Gm\Filesystem\Filesystem as Fs;
 class GalleryGrid extends GridModel
 {
     /**
-     * Маршрут к элементам альбомов.
+     * Маршрут к элементам компонентов медиагалереи.
      * 
      * @see Grid::beforeSelect()
      * 
      * @var string
      */
-    protected string $itemsRoute;
+    protected string $itemsRoute = '';
 
     /**
      * Информация о плагинах модуля.
@@ -87,7 +87,7 @@ class GalleryGrid extends GridModel
                 // всплывающие сообщение
                 $this->response()
                     ->meta
-                        ->cmdPopupMsg($message['message'], $this->module->t('Deleting a album'), $message['type']);
+                        ->cmdPopupMsg($message['message'], $this->module->t('Deleting a component'), $message['type']);
                 /** @var \Gm\Panel\Controller\GridController $controller */
                 $controller = $this->controller();
                 // обновить список
@@ -96,22 +96,22 @@ class GalleryGrid extends GridModel
     }
 
     /**
-     * Удаляет файлы из папки альбома.
+     * Удаляет файлы из папки компонента медиагалереи.
      * 
-     * @param array<int, int> $rowsId Идентификаторы альбомов.
-     * @param bool $someRecords Значение `true`, если удаление нескольких альбомов.
+     * @param array<int, int> $rowsId Идентификаторы компонентов.
+     * @param bool $someRecords Значение `true`, если удаление нескольких компонентов.
      * 
      * @return bool
      */
     protected function deleteFiles(array $rowsId, bool $someRecords): bool
     {
-        // если удаление выбранных альбомов, а идент. нет
+        // если удаление выбранных компонентов, а идент. нет
         if ($someRecords && empty($rowsId)) return true;
 
         /** @var string $publishedPath */
         $publishedPath = Gm::alias('@published');
 
-        /** @var array $rows Все альбомы */
+        /** @var array $rows Все компоненты */
         $rows = (new Gallery())->fetchAll(null, ['*'], $someRecords ? ['id' => $rowsId] : null);
         $index = 1;
         foreach ($rows as $row) {
@@ -124,11 +124,11 @@ class GalleryGrid extends GridModel
                 if (!Fs::deleteDirectory($realPath)) {
                     $this->controller()->errorResponse(
                         $this->module->t(
-                            'Error deleting folder "{0}" (no access), album "{1}"', [$row['path'], $row['name']]
+                            'Error deleting folder "{0}" (no access), component "{1}"', [$row['path'], $row['name']]
                         ) 
                         . '<br>' .
                         $this->module->t(
-                            'Folders ({0} of {1}) containing album files were partially deleted, but album records remain', [$index, sizeof($rows)]
+                            'Folders ({0} of {1}) containing component files were partially deleted, but component records remain', [$index, sizeof($rows)]
                         )
                     );
                     return false;
