@@ -15,7 +15,7 @@ use Gm\Db\Sql\Select;
 use Gm\Db\Sql\Expression;
 
 /**
- * Активная запись элемента альбома.
+ * Активная запись элемента компонента медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Model
@@ -46,7 +46,7 @@ class Item extends ActiveRecord
     {
         return [
             'id'          => 'id',
-            'galleryId'   => 'gallery_id', // идент. альбома
+            'galleryId'   => 'gallery_id', // идент. компонента медиагалереи
             'index'       => 'index', // порядковый номер
             'name'        => 'name', // название
             'description' => 'description', // описание
@@ -85,7 +85,7 @@ class Item extends ActiveRecord
      * 
      * @see ActiveRecord::selectByPk()
      * 
-     * @param mixed $id Идентификатор элемента альбома.
+     * @param mixed $id Идентификатор элемента компонента медиагалереи.
      * 
      * @return null|Item Активная запись при успешном запросе, иначе `null`.
      */
@@ -95,12 +95,12 @@ class Item extends ActiveRecord
     }
 
     /**
-     * Скрывает все элементы альбома.
+     * Скрывает все элементы компонента медиагалереи.
      * 
-     * @param int $galleryId Идентификатор альбома.
+     * @param int $galleryId Идентификатор компонента медиагалереи.
      * 
      * @return false|int Если значение `false`, ошибка выполнения инструкции SQL. Иначе количество 
-     *     скрытых элементов альбома.
+     *     скрытых элементов компонента медиагалереи.
      */
     public function hideAll(int $galleryId): false|int
     {
@@ -108,7 +108,7 @@ class Item extends ActiveRecord
     }
 
     /**
-     * Скрывает элемент альбома.
+     * Скрывает элемент компонента медиагалереи.
      * 
      * @return void
      */
@@ -119,12 +119,12 @@ class Item extends ActiveRecord
     }
 
     /**
-     * Показывает все элементы альбома.
+     * Показывает все элементы компонента медиагалереи.
      * 
-     * @param int $galleryId Идентификатор альбома.
+     * @param int $galleryId Идентификатор компонента медиагалереи.
      * 
      * @return false|int Если значение `false`, ошибка выполнения инструкции SQL. Иначе количество 
-     *     видимых элементов альбома.
+     *     видимых элементов компонента медиагалереи.
      */
     public function showAll(int $galleryId): false|int
     {
@@ -132,7 +132,7 @@ class Item extends ActiveRecord
     }
 
     /**
-     * Показывает элементы альбома.
+     * Показывает элементы компонента медиагалереи.
      * 
      * @return void
      */
@@ -143,9 +143,9 @@ class Item extends ActiveRecord
     }
 
     /**
-     * Возвращает порядковый номер последнего элемента галереи.
+     * Возвращает порядковый номер последнего элемента медигалереи.
      * 
-     * @param int $galleryId Идент. галереи.
+     * @param int $galleryId Идент. медегалереи.
      * 
      * @return int
      */
