@@ -16,7 +16,7 @@ use Gm\Panel\Controller\GridController;
 use Gm\Backend\MediaGallery\Model\Gallery;
 
 /**
- * Контроллер списка элеменов альбома.
+ * Контроллер списка элеменов компонента медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Controller
