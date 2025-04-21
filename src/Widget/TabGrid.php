@@ -15,7 +15,7 @@ use Gm\Panel\Helper\HtmlGrid;
 use Gm\Panel\Helper\HtmlNavigator as HtmlNav;
 
 /**
- * Виджет для формирования интерфейса вкладки с сеткой данных альбомов.
+ * Виджет для формирования интерфейса вкладки с сеткой данных компонентов медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Widget
@@ -36,7 +36,7 @@ class TabGrid extends \Gm\Panel\Widget\TabGrid
             ExtGrid::columnAction(),
             [
                 'text'      => 'ID',
-                'tooltip'   => '#Album identifier',
+                'tooltip'   => '#Component identifier',
                 'dataIndex' => 'id',
                 'filter'    => ['type' => 'numeric'],
                 'width'     => 70
@@ -69,19 +69,19 @@ class TabGrid extends \Gm\Panel\Widget\TabGrid
             ],
             [
                 'text'      => '#Type',
-                'tooltip'   => '#Album type',
+                'tooltip'   => '#Component type',
                 'dataIndex' => 'pname',
                 'width'     => 150
             ],
             [
                 'xtype'   => 'g-gridcolumn-control',
                 'width'   => 50,
-                'tooltip' => '#Album items',
+                'tooltip' => '#Component items',
                 'items'   => [
                     [
                         'iconCls'   => 'g-icon-svg g-icon_size_20 gm-media-gallery__icon-items',
                         'dataIndex' => 'itemsRoute',
-                        'tooltip'   => '#Go to adding / editing album items',
+                        'tooltip'   => '#Go to adding / editing component items',
                         'handler'   => 'loadWidgetFromCell'
                     ],
                 ]
@@ -89,7 +89,7 @@ class TabGrid extends \Gm\Panel\Widget\TabGrid
             [
                 'text'        => ExtGrid::columnIcon('g-icon-m_visible', 'svg'),
                 'xtype'       => 'g-gridcolumn-switch',
-                'tooltip'     => '#The album has been published',
+                'tooltip'     => '#The component has been published',
                 'selector'    => 'grid',
                 'filter'      => ['type' => 'boolean'],
                 'collectData' => ['name', 'pname'],
@@ -108,10 +108,10 @@ class TabGrid extends \Gm\Panel\Widget\TabGrid
                         // инструмент "Удалить"
                         'delete' => [
                             'iconCls' => 'g-icon-svg gm-media-gallery__icon-delete',
-                            'tooltip' => '#Deleting selected albums'
+                            'tooltip' => '#Deleting selected components'
                         ],
                         'cleanup' => [
-                            'tooltip' => '#Delete all albums'
+                            'tooltip' => '#Delete all components'
                         ],
                         '-',
                         'edit',
@@ -142,7 +142,7 @@ class TabGrid extends \Gm\Panel\Widget\TabGrid
                 ],
                 '-',
                 [
-                    'text'        => '#Album items',
+                    'text'        => '#Component items',
                     'iconCls'     => 'g-icon-svg gm-media-gallery__icon-items',
                     'handlerArgs' => [
                           'route'   => '{itemsRoute}',
@@ -187,7 +187,7 @@ class TabGrid extends \Gm\Panel\Widget\TabGrid
                         ['title' => $this->creator->t('Edit menu')]
                     ),
                     HtmlNav::widgetButton(
-                        $this->creator->t('Album items'),
+                        $this->creator->t('Component items'),
                         ['route' => '{itemsRoute}?pid={pid}', 'long' => true],
                         ['title' => $this->creator->t('Edit menu')]
                     )
@@ -224,7 +224,7 @@ class TabGrid extends \Gm\Panel\Widget\TabGrid
         return [
             'xtype'       => 'g-gridbutton-split',
             'text'        => '#Add',
-            'tooltip'     => '#Adding an album',
+            'tooltip'     => '#Adding an component',
             'iconCls'     => 'g-icon-svg gm-media-gallery__icon-add',
             'handlerArgs' => $items[0]['handlerArgs'] ?? [],
             'menu'        => ['items' => $items]
