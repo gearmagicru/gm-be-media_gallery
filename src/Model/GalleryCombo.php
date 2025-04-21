@@ -12,7 +12,7 @@ namespace Gm\Backend\MediaGallery\Model;
 use Gm\Panel\Data\Model\Combo\ComboModel;
 
 /**
- * Модель данных выпадающего списка альбомов.
+ * Модель данных выпадающего списка компонентов медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Model
