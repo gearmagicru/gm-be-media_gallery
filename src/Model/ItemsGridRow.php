@@ -13,7 +13,7 @@ use Gm;
 use Gm\Panel\Data\Model\FormModel;
 
 /**
- * Модель данных профиля элемента альбома.
+ * Модель данных профиля элемента компонента медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Model
