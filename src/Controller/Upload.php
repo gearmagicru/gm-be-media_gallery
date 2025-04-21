@@ -16,7 +16,7 @@ use Gm\Mvc\Controller\Controller;
 use Gm\Backend\MediaGallery\Model\Gallery;
 
 /**
- * Контроллер загрузки файлов альбома.
+ * Контроллер загрузки файлов компонента медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Controller
