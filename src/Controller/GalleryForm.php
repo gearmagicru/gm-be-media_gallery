@@ -16,7 +16,7 @@ use Gm\Panel\Widget\EditWindow;
 use Gm\Panel\Controller\FormController;
 
 /**
- * Контроллер формы альбома.
+ * Контроллер формы компонента медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Controller
