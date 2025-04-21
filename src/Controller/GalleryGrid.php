@@ -15,7 +15,7 @@ use Gm\Panel\Controller\GridController;
 use Gm\Backend\MediaGallery\Widget\TabGrid;
 
 /**
- * Контроллер списка альбомов.
+ * Контроллер списка компонентов медиагалереи.
  * 
  * @author Anton Tivonenko <anton.tivonenko@gmail.com>
  * @package Gm\Backend\MediaGallery\Controller
